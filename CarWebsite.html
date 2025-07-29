@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Car Game !!</title>
+
+<style type="text/css">
+body{background-color:black;background-image:url("nfs_gif.gif");background-repeat:no-repeat;background-size:100%;background-attatchment:fixed;background-position:-10% -10%;} 
+#message1{font-size:40px; text-align:center;}
+#button_one{position:absolute;top:75%;left:38.7%;}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #4CAF50; 
+  color: black; 
+  border: 2px solid #DD00F9;
+}
+
+.button1:hover {
+  background-color: #DD00F9;
+  color: white;
+}
+
+</style>
+</head>
+
+<body bgcolor="white">
+
+<div id="message1">
+</div>
+
+
+
+<button id="button_one" class="button button1" onclick="window.location.href = 'page1some.html';"></button>
+
+
+<script type="text/javascript">
+
+function message1()
+{
+document.getElementById("message1").innerHTML="Do you guys love car games ?<br>Do you want to make a simple one in python ?<br>Let's get started !!!";
+document.getElementById("message1").style.color="red";
+
+}
+message1();
+
+function button1()
+{
+document.getElementById("button_one").innerHTML="Click here !!!";
+}
+button1();
+
+</script>
+
+</body>
+</html>

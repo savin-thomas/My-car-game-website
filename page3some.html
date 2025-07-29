@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Code</title>
+<style type="text/css">
+
+#topLine1{color:violet;position:absolute;top:0px;left:720px;font-family:"Lucida Calligraphy";font-size:50px;font-style:italic;font-weight:bold;}
+
+#line1{text-align:center;font-family:"Lucida Calligraphy";font-size:50px;font-style:italic;font-weight:bold;}
+.paragraph{font-family:"Footlight MT";font-size:20px;}
+.heading{font-family:"Cooper"; font-size:35px;font-style:italic;font-weight:bold;}
+.subHeading{color:red;font-family:"Cooper"; font-size:20px;font-weight:bold;}
+
+#button_one{position:absolute;top:148px;left:611px;}
+#button_two{position:absolute;top:148px;left:778px;}
+#button_three{position:absolute;top:148px;left:918px;}
+#button_four{position:absolute;top:148px;left:1028px;}
+
+
+#topPart{background-color:#5B5C67;}
+
+
+.button {
+  position: relative;
+  overflow: hidden;
+
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.button1 {
+  background-color: #4CAF50; 
+  color: black; 
+  border: 2px solid #DD00F9;
+}
+
+.button1:hover {
+  background-color: #DD00F9;
+  color: white;
+}
+
+.button2 {
+  background-color: #4CAF50; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: #4CAF50; 
+  color: black; 
+  border: 2px solid #36ebf4;
+}
+
+.button3:hover {
+  background-color: #36ebf4;
+  color: white;
+}
+
+.button4 {
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid orange;
+}
+
+.button4:hover {background-color: orange;}
+
+.button5 {
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid gold;
+}
+
+.button5:hover {
+  background-color: gold;
+  color: white;
+}
+
+.button6{
+background-color: #4CAF50;
+color: black;
+border: 2px solid purple;
+}
+
+.button6:hover {
+  background-color: purple;
+  color: white;
+}
+
+
+</style>
+</head>
+
+<body bgcolor="yellow">
+<div id="topPart">
+<img src="Lamborghini-Logo.png" width="200px">
+<img src="Lamborghini-huracanPic.jpg" width="400px" height="200px">
+</div>
+
+<p id="topLine1">My Car Game !!</p>
+
+
+<a href="page1some.html" id="button_one" class="button button2">Introduction</a>
+
+<a href="page2some.html" id="button_two" class="button button3">Graphics</a>
+
+<a href="page3some.html" id="button_three" class="button button4">Code</a>
+
+<a href="page4some.html" id="button_four" class="button button5">Code Explanation</a>
+
+<p id="line1">The Code</p>
+
+<textarea rows="1159" cols="160" readonly>
+
+#import stuff
+import pygame
+import time
+import random
+
+#initialize pygame
+pygame.init()
+
+#some aspects
+screen_width = 1300
+screen_height = 700
+
+white = (255,255,255)
+black = (0,0,0)
+red = (255,0,0)
+green = (0,255,0)
+blue = (0,0,255)
+grey = (105,105,105)
+yellow = (255,242,0)
+
+
+count = 0
+
+car_width = 107
+car_height = 51
+car_x = 100
+car_y = 110
+car_velocity_x = 0
+car_velocity_y = 0
+
+road_width = 1300
+road_height = 473
+
+tin_startx = 1271
+tin_starty = 282
+
+board_startx = 646
+board_starty = 287
+
+tin2_startx = 0
+tin2_starty = 282
+
+divider_startx1 = 1270
+divider_starty1 = 190
+divider_endx1 = 1300
+divider_endy1 = 190
+
+divider_startx2 = 1210
+divider_starty2 = 190
+divider_endx2 = 1240
+divider_endy2 = 190
+
+divider_startx3 = 1150
+divider_starty3 = 190
+divider_endx3 = 1180
+divider_endy3 = 190
+
+divider_startx4 = 1090
+divider_starty4 = 190
+divider_endx4 = 1120
+divider_endy4 = 190
+
+divider_startx5 = 1030
+divider_starty5 = 190
+divider_endx5 = 1060
+divider_endy5 = 190
+
+divider_startx6 = 970
+divider_starty6 = 190
+divider_endx6 = 1000
+divider_endy6 = 190
+
+divider_startx7 = 910
+divider_starty7 = 190
+divider_endx7 = 940
+divider_endy7 = 190
+
+divider_startx8 = 850
+divider_starty8 = 190
+divider_endx8 = 880
+divider_endy8 = 190
+
+divider_startx9 = 790
+divider_starty9 = 190
+divider_endx9 = 820
+divider_endy9 = 190
+
+divider_startx10 = 730
+divider_starty10 = 190
+divider_endx10 = 760
+divider_endy10 = 190
+
+divider_startx11 = 670
+divider_starty11 = 190
+divider_endx11 = 700
+divider_endy11 = 190
+
+divider_startx12 = 610
+divider_starty12 = 190
+divider_endx12 = 640
+divider_endy12 = 190
+
+divider_startx13 = 550
+divider_starty13 = 190
+divider_endx13 = 580
+divider_endy13 = 190
+
+divider_startx14 = 490
+divider_starty14 = 190
+divider_endx14 = 520
+divider_endy14 = 190
+
+divider_startx15 = 430
+divider_starty15 = 190
+divider_endx15 = 460
+divider_endy15 = 190
+
+divider_startx16 = 370
+divider_starty16 = 190
+divider_endx16 = 400
+divider_endy16 = 190
+
+divider_startx17 = 310
+divider_starty17 = 190
+divider_endx17 = 340
+divider_endy17 = 190
+
+divider_startx18 = 250
+divider_starty18 = 190
+divider_endx18 = 280
+divider_endy18 = 190
+
+divider_startx19 = 190
+divider_starty19 = 190
+divider_endx19 = 220
+divider_endy19 = 190
+
+divider_startx20 = 130
+divider_starty20 = 190
+divider_endx20 = 160
+divider_endy20 = 190
+
+divider_startx21 = 70
+divider_starty21 = 190
+divider_endx21 = 100
+divider_endy21 = 190
+
+divider_startx22 = 10
+divider_starty22 = 190
+divider_endx22 = 40
+divider_endy22 = 190
+
+divider_startx23 = -40
+divider_starty23 = 190
+divider_endx23 = -10
+divider_endy23 = 190
+
+#now for the new road
+
+divider_startx24 = 1270
+divider_starty24 = 410
+divider_endx24 = 1300
+divider_endy24 = 410
+
+divider_startx25 = 1210
+divider_starty25 = 410
+divider_endx25 = 1240
+divider_endy25 = 410
+
+divider_startx26 = 1150
+divider_starty26 = 410
+divider_endx26 = 1180
+divider_endy26 = 410
+
+divider_startx27 = 1090
+divider_starty27 = 410
+divider_endx27 = 1120
+divider_endy27 = 410
+
+divider_startx28 = 1030
+divider_starty28 = 410
+divider_endx28 = 1060
+divider_endy28 = 410
+
+divider_startx29 = 970
+divider_starty29 = 410
+divider_endx29 = 1000
+divider_endy29 = 410
+
+divider_startx30 = 910
+divider_starty30 = 410
+divider_endx30 = 940
+divider_endy30 = 410
+
+divider_startx31 = 850
+divider_starty31 = 410
+divider_endx31 = 880
+divider_endy31 = 410
+
+divider_startx32 = 790
+divider_starty32 = 410
+divider_endx32 = 820
+divider_endy32 = 410
+
+divider_startx33 = 730
+divider_starty33 = 410
+divider_endx33 = 760
+divider_endy33 = 410
+
+divider_startx34 = 670
+divider_starty34 = 410
+divider_endx34 = 700
+divider_endy34 = 410
+
+divider_startx35 = 610
+divider_starty35 = 410
+divider_endx35 = 640
+divider_endy35 = 410
+
+divider_startx36 = 550
+divider_starty36 = 410
+divider_endx36 = 580
+divider_endy36 = 410
+
+divider_startx37 = 490
+divider_starty37 = 410
+divider_endx37 = 520
+divider_endy37 = 410
+
+divider_startx38 = 430
+divider_starty38 = 410
+divider_endx38 = 460
+divider_endy38 = 410
+
+divider_startx39 = 370
+divider_starty39 = 410
+divider_endx39 = 400
+divider_endy39 = 410
+
+divider_startx40 = 310
+divider_starty40 = 410
+divider_endx40 = 340
+divider_endy40 = 410
+
+divider_startx41 = 250
+divider_starty41 = 410
+divider_endx41 = 280
+divider_endy41 = 410
+
+divider_startx42 = 190
+divider_starty42 = 410
+divider_endx42 = 220
+divider_endy42 = 410
+
+divider_startx43 = 130
+divider_starty43 = 410
+divider_endx43 = 160
+divider_endy43 = 410
+
+divider_startx44 = 70
+divider_starty44 = 410
+divider_endx44 = 100
+divider_endy44 = 410
+
+divider_startx45 = 10
+divider_starty45 = 410
+divider_endx45 = 40
+divider_endy45 = 410
+
+divider_startx46 = -40
+divider_starty46 = 410
+divider_endx46 = -10
+divider_endy46 = 410
+
+tin_width = 19
+tin_height = 30
+tin_speed = 5
+
+tin2_width = 19
+tin2_height = 30
+tin2_speed = 5
+
+board_width = 73
+board_height = 23
+board_speed = 5
+
+divider_width = 30
+divider_speed = 5
+
+#car1 aspects
+car1_startx = 1300
+car1_starty = 115
+
+car1_width = 109
+car1_height = 56
+car1_speed = 3
+
+#car2 aspects
+car2_startx = 1300
+car2_starty = 335
+
+car2_width = 99
+car2_height = 45
+car2_speed = 3
+
+#car3 aspects
+car3_startx = 3000
+car3_starty = 210
+
+car3_width = 111
+car3_height = 55
+car3_speed = 6
+
+#car4 aspects
+car4_startx = 3000
+car4_starty = 335
+
+car4_width = 98
+car4_height = 50
+car4_speed = 6
+
+position1 = (1800,115)
+position2 = (1800,210)
+position3 = (1300,115)
+position4 = (1300,210)
+position5 = (1800,335)
+position6 = (1800,435)
+position7 = (1300,335)
+position8 = (1300,435)
+
+#initialize screen
+screen = pygame.display.set_mode((screen_width,screen_height))
+pygame.display.set_caption("Just for practice")
+
+#make a time object
+clock = pygame.time.Clock()
+
+#fill the screen background color           
+def background():
+    screen.fill(white)
+    pygame.draw.rect(screen,grey,(0,72,road_width,road_height))
+    pygame.draw.line(screen,yellow,(0,100),(1300,100),4)
+    pygame.draw.line(screen,yellow,(0,280),(1300,280),4)
+    pygame.draw.line(screen,yellow,(0,313),(1300,313),4)
+    pygame.draw.line(screen,yellow,(0,514),(1300,514),4)
+
+#crashed display text and loop game
+def crashed():
+    font = pygame.font.Font('freesansbold.ttf',60)
+    text = font.render('You Crashed',True,black)
+    textpos = text.get_rect(center =(screen_width/2,screen_height/2 - 100))
+    screen.blit(text,textpos)
+
+    pygame.display.update()
+    time.sleep(2)
+    game_loop()
+
+
+#draw the tin and board objects
+def draw_objects():
+    tinImg = pygame.image.load('object1.png')
+    screen.blit(tinImg,(tin_startx,tin_starty))
+
+    boardImg = pygame.image.load('object2.png')
+    screen.blit(boardImg,(board_startx,board_starty))
+
+    tin2Img = pygame.image.load('object1.png')
+    screen.blit(tin2Img,(tin2_startx,tin2_starty))
+    
+   
+#now to draw the dividers and make them shift
+def draw_divider():
+    pygame.draw.line(screen,white,(divider_startx1,divider_starty1),(divider_endx1,divider_endy1),4)
+    pygame.draw.line(screen,white,(divider_startx2,divider_starty2),(divider_endx2,divider_endy2),4)
+    pygame.draw.line(screen,white,(divider_startx3,divider_starty3),(divider_endx3,divider_endy3),4)
+    pygame.draw.line(screen,white,(divider_startx4,divider_starty4),(divider_endx4,divider_endy4),4)
+    pygame.draw.line(screen,white,(divider_startx5,divider_starty5),(divider_endx5,divider_endy5),4)
+    pygame.draw.line(screen,white,(divider_startx6,divider_starty6),(divider_endx6,divider_endy6),4)
+    pygame.draw.line(screen,white,(divider_startx7,divider_starty7),(divider_endx7,divider_endy7),4)
+    pygame.draw.line(screen,white,(divider_startx8,divider_starty8),(divider_endx8,divider_endy8),4)
+    pygame.draw.line(screen,white,(divider_startx9,divider_starty9),(divider_endx9,divider_endy9),4)
+    pygame.draw.line(screen,white,(divider_startx10,divider_starty10),(divider_endx10,divider_endy10),4)
+    pygame.draw.line(screen,white,(divider_startx11,divider_starty11),(divider_endx11,divider_endy11),4)
+    pygame.draw.line(screen,white,(divider_startx12,divider_starty12),(divider_endx12,divider_endy12),4)
+    pygame.draw.line(screen,white,(divider_startx13,divider_starty13),(divider_endx13,divider_endy13),4)
+    pygame.draw.line(screen,white,(divider_startx14,divider_starty14),(divider_endx14,divider_endy14),4)
+    pygame.draw.line(screen,white,(divider_startx15,divider_starty15),(divider_endx15,divider_endy15),4)
+    pygame.draw.line(screen,white,(divider_startx16,divider_starty16),(divider_endx16,divider_endy16),4)
+    pygame.draw.line(screen,white,(divider_startx17,divider_starty17),(divider_endx17,divider_endy17),4)
+    pygame.draw.line(screen,white,(divider_startx18,divider_starty18),(divider_endx18,divider_endy18),4)
+    pygame.draw.line(screen,white,(divider_startx19,divider_starty19),(divider_endx19,divider_endy19),4)
+    pygame.draw.line(screen,white,(divider_startx20,divider_starty20),(divider_endx20,divider_endy20),4)
+    pygame.draw.line(screen,white,(divider_startx21,divider_starty21),(divider_endx21,divider_endy21),4)
+    pygame.draw.line(screen,white,(divider_startx22,divider_starty22),(divider_endx22,divider_endy22),4)
+    pygame.draw.line(screen,white,(divider_startx23,divider_starty23),(divider_endx23,divider_endy23),4)
+
+    #new road
+
+    pygame.draw.line(screen,white,(divider_startx24,divider_starty24),(divider_endx24,divider_endy24),4)
+    pygame.draw.line(screen,white,(divider_startx25,divider_starty25),(divider_endx25,divider_endy25),4)
+    pygame.draw.line(screen,white,(divider_startx26,divider_starty26),(divider_endx26,divider_endy26),4)
+    pygame.draw.line(screen,white,(divider_startx27,divider_starty27),(divider_endx27,divider_endy27),4)
+    pygame.draw.line(screen,white,(divider_startx28,divider_starty28),(divider_endx28,divider_endy28),4)
+    pygame.draw.line(screen,white,(divider_startx29,divider_starty29),(divider_endx29,divider_endy29),4)
+    pygame.draw.line(screen,white,(divider_startx30,divider_starty30),(divider_endx30,divider_endy30),4)
+    pygame.draw.line(screen,white,(divider_startx31,divider_starty31),(divider_endx31,divider_endy31),4)
+    pygame.draw.line(screen,white,(divider_startx32,divider_starty32),(divider_endx32,divider_endy32),4)
+    pygame.draw.line(screen,white,(divider_startx33,divider_starty33),(divider_endx33,divider_endy33),4)
+    pygame.draw.line(screen,white,(divider_startx34,divider_starty34),(divider_endx34,divider_endy34),4)
+    pygame.draw.line(screen,white,(divider_startx35,divider_starty35),(divider_endx35,divider_endy35),4)
+    pygame.draw.line(screen,white,(divider_startx36,divider_starty36),(divider_endx36,divider_endy36),4)
+    pygame.draw.line(screen,white,(divider_startx37,divider_starty37),(divider_endx37,divider_endy37),4)
+    pygame.draw.line(screen,white,(divider_startx38,divider_starty38),(divider_endx38,divider_endy38),4)
+    pygame.draw.line(screen,white,(divider_startx39,divider_starty39),(divider_endx39,divider_endy39),4)
+    pygame.draw.line(screen,white,(divider_startx40,divider_starty40),(divider_endx40,divider_endy40),4)
+    pygame.draw.line(screen,white,(divider_startx41,divider_starty41),(divider_endx41,divider_endy41),4)
+    pygame.draw.line(screen,white,(divider_startx42,divider_starty42),(divider_endx42,divider_endy42),4)
+    pygame.draw.line(screen,white,(divider_startx43,divider_starty43),(divider_endx43,divider_endy43),4)
+    pygame.draw.line(screen,white,(divider_startx44,divider_starty44),(divider_endx44,divider_endy44),4)
+    pygame.draw.line(screen,white,(divider_startx45,divider_starty45),(divider_endx45,divider_endy45),4)
+    pygame.draw.line(screen,white,(divider_startx46,divider_starty46),(divider_endx46,divider_endy46),4)
+        
+        
+    
+#draw the player car
+def car_draw():
+    car_player_img = pygame.image.load('lamborghini_top_view_rotated_edited2.png')
+    screen.blit(car_player_img,(car_x,car_y))
+
+
+#draw traffic cars
+def draw_traffic_car1():
+    car1Img = pygame.image.load('car1.png')
+    screen.blit(car1Img,(car1_startx,car1_starty))
+
+def draw_traffic_car2():
+    car2Img = pygame.image.load('car2.png')
+    screen.blit(car2Img,(car2_startx,car2_starty))
+
+def draw_traffic_car3():
+    car3Img = pygame.image.load('car3.png')
+    screen.blit(car3Img,(car3_startx,car3_starty))
+
+def draw_traffic_car4():
+    car4Img = pygame.image.load('car4.png')
+    screen.blit(car4Img,(car4_startx,car4_starty))
+
+#get random positions for traffic cars
+def get_random_position1():
+    random_position1 = random.choice([position1,position2])
+    return random_position1
+
+def get_random_position2():
+    random_position2 = random.choice([position5,position6])
+    return random_position2
+
+def get_random_position3():
+    random_position3 = random.choice([position3,position4])
+    return random_position3
+
+def get_random_position4():
+    random_position4 = random.choice([position7,position8])
+    return random_position4
+
+#draw score
+def draw_score(count):
+    font = pygame.font.Font('freesansbold.ttf',36)
+    text = font.render('Score : ' + str(count),True,black)
+    Textrect = text.get_rect()
+    screen.blit(text,Textrect)
+
+#assign traffic car positions    
+(car1_startx,car1_starty) = get_random_position1()
+(car3_startx,car3_starty) = get_random_position2()
+(car2_startx,car2_starty) = get_random_position3()
+(car4_startx,car4_starty) = get_random_position4()
+
+#game loop
+def game_loop():
+    #globalize some aspects
+    global tin_speed,tin2_speed,board_speed,divider_speed,car1_speed,car2_speed,car3_speed,car4_speed,count
+    global car3_startx,car3_starty,car4_startx,car4_starty,car2_startx,car2_starty,car1_startx,car1_starty
+    global tin2_startx,tin2_starty,board_startx,board_starty,tin_startx,tin_starty
+    global car_x,car_y,car_velocity_x,car_velocity_y
+    global divider_startx1,divider_endx1,divider_startx2,divider_endx2
+    global divider_startx3,divider_endx3,divider_startx4,divider_endx4
+    global divider_startx5,divider_endx5,divider_startx6,divider_endx6
+    global divider_startx7,divider_endx7,divider_startx8,divider_endx8
+    global divider_startx9,divider_endx9,divider_startx10,divider_endx10
+    global divider_startx11,divider_endx11,divider_startx12,divider_endx12
+    global divider_startx13,divider_endx13,divider_startx14,divider_endx14
+    global divider_startx15,divider_endx15,divider_startx16,divider_endx16
+    global divider_startx17,divider_endx17,divider_startx18,divider_endx18
+    global divider_startx19,divider_endx19,divider_startx20,divider_endx20
+    global divider_startx21,divider_endx21,divider_startx22,divider_endx22
+    global divider_startx23,divider_endx23,divider_startx24,divider_endx24
+    global divider_startx25,divider_endx25,divider_startx26,divider_endx26
+    global divider_startx27,divider_endx27,divider_startx28,divider_endx28
+    global divider_startx29,divider_endx29,divider_startx30,divider_endx30
+    global divider_startx31,divider_endx31,divider_startx32,divider_endx32
+    global divider_startx33,divider_endx33,divider_startx34,divider_endx34
+    global divider_startx35,divider_endx35,divider_startx36,divider_endx36
+    global divider_startx37,divider_endx37,divider_startx38,divider_endx38
+    global divider_startx39,divider_endx39,divider_startx40,divider_endx40
+    global divider_startx41,divider_endx41,divider_startx42,divider_endx42
+    global divider_startx43,divider_endx43,divider_startx44,divider_endx44
+    global divider_startx45,divider_endx45,divider_startx45,divider_endx45
+    global divider_startx46,divider_endx46
+    
+    
+    run = True
+    while run:
+        #the event loop
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+            #key input
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    car_velocity_x = -3
+                if event.key == pygame.K_RIGHT:
+                    car_velocity_x = 3
+                if event.key == pygame.K_UP:
+                    car_velocity_y = -3
+                if event.key == pygame.K_DOWN:
+                    car_velocity_y = 3
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT or pygame.K_RIGHT or pygame.K_UP or pygame.K_DOWN:
+                    car_velocity_x = 0
+                    car_velocity_y = 0
+
+        
+        #draw background
+        background()
+
+        #draw road objects like tins and board
+        draw_objects()
+
+        #make the first tin move
+        tin2_startx += -tin2_speed
+        if tin2_startx + tin2_width < 0:
+            tin2_startx = tin_startx + 635       
+
+
+        #make the board move
+        board_startx += -board_speed
+        if board_startx + board_width < 0:
+            board_startx = tin2_startx + 625
+        #make the second tin move
+        tin_startx += -tin_speed
+        if tin_startx + tin_width < 0:
+            tin_startx = board_startx + 646
+
+        #drawing the traffic cars and making the move
+
+        draw_traffic_car1()
+        draw_traffic_car2()
+        draw_traffic_car3()
+        draw_traffic_car4()
+        car1_startx += - car1_speed
+        car3_startx += -car3_speed
+        car2_startx += -car2_speed
+        car4_startx += -car4_speed
+
+        #assigning new positions to the traffic cars after they pass
+        #increasing the score
+        if car1_startx + car1_width < 0:
+            (car1_startx,car1_starty) = get_random_position1()
+            (car2_startx,car2_starty) = get_random_position3()
+            count += 2
+
+        if car3_startx + car3_width < 0:
+            (car3_startx,car3_starty) = get_random_position2()
+            (car4_startx,car4_starty) = get_random_position4()
+            count += 2
+
+        #draw the score
+        draw_score(count)
+            
+        #draw the dividers
+        draw_divider()
+
+        #make dividers move and assign new positons after they pass
+        #1
+        divider_startx1 += -divider_speed
+        divider_endx1 += -divider_speed
+
+        if divider_endx1 < 0 - divider_width:
+            divider_startx1 = screen_width 
+            divider_endx1 = screen_width + 30
+
+        #2
+        divider_startx2 += -divider_speed
+        divider_endx2 += -divider_speed
+
+        if divider_endx2 < 0 - divider_width:
+            divider_startx2 = screen_width 
+            divider_endx2 = screen_width + 30
+
+        #3
+        divider_startx3 += -divider_speed
+        divider_endx3 += -divider_speed
+
+        if divider_endx3 < 0 - divider_width:
+            divider_startx3 = screen_width 
+            divider_endx3 = screen_width + 30
+
+        #4
+        divider_startx4 += -divider_speed
+        divider_endx4 += -divider_speed
+
+        if divider_endx4 < 0 - divider_width:
+            divider_startx4 = screen_width 
+            divider_endx4 = screen_width + 30
+
+        #5
+        divider_startx5 += -divider_speed
+        divider_endx5 += -divider_speed
+
+        if divider_endx5 < 0 - divider_width:
+            divider_startx5 = screen_width 
+            divider_endx5 = screen_width + 30
+
+        #6
+        divider_startx6 += -divider_speed
+        divider_endx6 += -divider_speed
+
+        if divider_endx6 < 0 - divider_width:
+            divider_startx6 = screen_width 
+            divider_endx6 = screen_width + 30
+
+        #7
+        divider_startx7 += -divider_speed
+        divider_endx7 += -divider_speed
+
+        if divider_endx7 < 0 - divider_width:
+            divider_startx7 = screen_width 
+            divider_endx7 = screen_width + 30
+
+        #8
+        divider_startx8 += -divider_speed
+        divider_endx8 += -divider_speed
+
+        if divider_endx8 < 0 - divider_width:
+            divider_startx8 = screen_width 
+            divider_endx8 = screen_width + 30
+
+        #9
+        divider_startx9 += -divider_speed
+        divider_endx9 += -divider_speed
+
+        if divider_endx9 < 0 - divider_width:
+            divider_startx9 = screen_width 
+            divider_endx9 = screen_width + 30
+
+        #10
+        divider_startx10 += -divider_speed
+        divider_endx10 += -divider_speed
+
+        if divider_endx10 < 0 - divider_width:
+            divider_startx10 = screen_width 
+            divider_endx10 = screen_width + 30
+
+
+        #11
+        divider_startx11 += -divider_speed
+        divider_endx11 += -divider_speed
+
+        if divider_endx11 < 0 - divider_width:
+            divider_startx11 = screen_width 
+            divider_endx11 = screen_width + 30
+
+
+        #12
+        divider_startx12 += -divider_speed
+        divider_endx12 += -divider_speed
+
+        if divider_endx12 < 0 - divider_width:
+            divider_startx12 = screen_width 
+            divider_endx12 = screen_width + 30
+
+
+        #13
+        divider_startx13 += -divider_speed
+        divider_endx13 += -divider_speed
+
+        if divider_endx13 < 0 - divider_width:
+            divider_startx13 = screen_width 
+            divider_endx13 = screen_width + 30
+
+        #14
+        divider_startx14 += -divider_speed
+        divider_endx14 += -divider_speed
+
+        if divider_endx14 < 0 - divider_width:
+            divider_startx14 = screen_width 
+            divider_endx14 = screen_width + 30
+
+
+        #15
+        divider_startx15 += -divider_speed
+        divider_endx15 += -divider_speed
+
+        if divider_endx15 < 0 - divider_width:
+            divider_startx15 = screen_width 
+            divider_endx15 = screen_width + 30
+
+        #16
+        divider_startx16 += -divider_speed
+        divider_endx16 += -divider_speed
+
+        if divider_endx16 < 0 - divider_width:
+            divider_startx16 = screen_width 
+            divider_endx16 = screen_width + 30
+
+        #17
+        divider_startx17 += -divider_speed
+        divider_endx17 += -divider_speed
+
+        if divider_endx17 < 0 - divider_width:
+            divider_startx17 = screen_width 
+            divider_endx17 = screen_width + 30
+
+        #18
+        divider_startx18 += -divider_speed
+        divider_endx18 += -divider_speed
+
+        if divider_endx18 < 0 - divider_width:
+            divider_startx18 = screen_width 
+            divider_endx18 = screen_width + 30
+
+        #19
+        divider_startx19 += -divider_speed
+        divider_endx19 += -divider_speed
+
+        if divider_endx19 < 0 - divider_width:
+            divider_startx19 = screen_width 
+            divider_endx19 = screen_width + 30
+
+        #20
+        divider_startx20 += -divider_speed
+        divider_endx20 += -divider_speed
+
+        if divider_endx20 < 0 - divider_width:
+            divider_startx20 = screen_width 
+            divider_endx20 = screen_width + 30
+
+        #21
+        divider_startx21 += -divider_speed
+        divider_endx21 += -divider_speed
+
+        if divider_endx21 < 0 - divider_width:
+            divider_startx21 = screen_width 
+            divider_endx21 = screen_width + 30
+
+        #22
+        divider_startx22 += -divider_speed
+        divider_endx22 += -divider_speed
+
+        if divider_endx22 < 0 - divider_width:
+            divider_startx22 = screen_width 
+            divider_endx22 = screen_width + 30
+
+        #23
+        divider_startx23 += -divider_speed
+        divider_endx23 += -divider_speed
+
+        if divider_endx23 < 0 - divider_width:
+            divider_startx23 = screen_width 
+            divider_endx23 = screen_width + 30
+
+        #new road
+
+        #24
+        divider_startx24 += -divider_speed
+        divider_endx24 += -divider_speed
+
+        if divider_endx24 < 0 - divider_width:
+            divider_startx24 = screen_width 
+            divider_endx24 = screen_width + 30
+
+        #25
+        divider_startx25 += -divider_speed
+        divider_endx25 += -divider_speed
+
+        if divider_endx25 < 0 - divider_width:
+            divider_startx25 = screen_width 
+            divider_endx25 = screen_width + 30
+
+        #26
+        divider_startx26 += -divider_speed
+        divider_endx26 += -divider_speed
+
+        if divider_endx26 < 0 - divider_width:
+            divider_startx26 = screen_width 
+            divider_endx26 = screen_width + 30
+
+        #27
+        divider_startx27 += -divider_speed
+        divider_endx27 += -divider_speed
+
+        if divider_endx27 < 0 - divider_width:
+            divider_startx27 = screen_width 
+            divider_endx27 = screen_width + 30
+
+        #28
+        divider_startx28 += -divider_speed
+        divider_endx28 += -divider_speed
+
+        if divider_endx28 < 0 - divider_width:
+            divider_startx28 = screen_width 
+            divider_endx28 = screen_width + 30
+
+        #29
+        divider_startx29 += -divider_speed
+        divider_endx29 += -divider_speed
+
+        if divider_endx29 < 0 - divider_width:
+            divider_startx29 = screen_width 
+            divider_endx29 = screen_width + 30
+
+        #30
+        divider_startx30 += -divider_speed
+        divider_endx30 += -divider_speed
+
+        if divider_endx30 < 0 - divider_width:
+            divider_startx30 = screen_width 
+            divider_endx30 = screen_width + 30
+
+        #31
+        divider_startx31 += -divider_speed
+        divider_endx31 += -divider_speed
+
+        if divider_endx31 < 0 - divider_width:
+            divider_startx31 = screen_width 
+            divider_endx31 = screen_width + 30
+
+        #32
+        divider_startx32 += -divider_speed
+        divider_endx32 += -divider_speed
+
+        if divider_endx32 < 0 - divider_width:
+            divider_startx32 = screen_width 
+            divider_endx32 = screen_width + 30
+
+        #33
+        divider_startx33 += -divider_speed
+        divider_endx33 += -divider_speed
+
+        if divider_endx33 < 0 - divider_width:
+            divider_startx33 = screen_width 
+            divider_endx33 = screen_width + 30
+
+
+        #34
+        divider_startx34 += -divider_speed
+        divider_endx34 += -divider_speed
+
+        if divider_endx34 < 0 - divider_width:
+            divider_startx34 = screen_width 
+            divider_endx34 = screen_width + 30
+
+
+        #35
+        divider_startx35 += -divider_speed
+        divider_endx35 += -divider_speed
+
+        if divider_endx35 < 0 - divider_width:
+            divider_startx35 = screen_width 
+            divider_endx35 = screen_width + 30
+
+
+        #36
+        divider_startx36 += -divider_speed
+        divider_endx36 += -divider_speed
+
+        if divider_endx36 < 0 - divider_width:
+            divider_startx36 = screen_width 
+            divider_endx36 = screen_width + 30
+
+        #37
+        divider_startx37 += -divider_speed
+        divider_endx37 += -divider_speed
+
+        if divider_endx37 < 0 - divider_width:
+            divider_startx37 = screen_width 
+            divider_endx37 = screen_width + 30
+
+
+        #38
+        divider_startx38 += -divider_speed
+        divider_endx38 += -divider_speed
+
+        if divider_endx38 < 0 - divider_width:
+            divider_startx38 = screen_width 
+            divider_endx38 = screen_width + 30
+
+        #39
+        divider_startx39 += -divider_speed
+        divider_endx39 += -divider_speed
+
+        if divider_endx39 < 0 - divider_width:
+            divider_startx39 = screen_width 
+            divider_endx39 = screen_width + 30
+
+        #40
+        divider_startx40 += -divider_speed
+        divider_endx40 += -divider_speed
+
+        if divider_endx40 < 0 - divider_width:
+            divider_startx40 = screen_width 
+            divider_endx40 = screen_width + 30
+
+        #41
+        divider_startx41 += -divider_speed
+        divider_endx41 += -divider_speed
+
+        if divider_endx41 < 0 - divider_width:
+            divider_startx41 = screen_width 
+            divider_endx41 = screen_width + 30
+
+        #42
+        divider_startx42 += -divider_speed
+        divider_endx42 += -divider_speed
+
+        if divider_endx42 < 0 - divider_width:
+            divider_startx42 = screen_width 
+            divider_endx42 = screen_width + 30
+
+        #43
+        divider_startx43 += -divider_speed
+        divider_endx43 += -divider_speed
+
+        if divider_endx43 < 0 - divider_width:
+            divider_startx43 = screen_width 
+            divider_endx43 = screen_width + 30
+
+        #44
+        divider_startx44 += -divider_speed
+        divider_endx44 += -divider_speed
+
+        if divider_endx44 < 0 - divider_width:
+            divider_startx44 = screen_width 
+            divider_endx44 = screen_width + 30
+
+        #45
+        divider_startx45 += -divider_speed
+        divider_endx45 += -divider_speed
+
+        if divider_endx45 < 0 - divider_width:
+            divider_startx45 = screen_width 
+            divider_endx45 = screen_width + 30
+
+        #46
+        divider_startx46 += -divider_speed
+        divider_endx46 += -divider_speed
+
+        if divider_endx46 < 0 - divider_width:
+            divider_startx46 = screen_width 
+            divider_endx46 = screen_width + 30
+
+        #increasing the difficulty
+        if count == 0:
+            car1_speed = 2
+            car2_speed = 2
+            car3_speed = 5
+            car4_speed = 5
+
+            tin_speed = 4
+            tin2_speed = 4
+            board_speed = 4
+            divider_speed = 4
+            
+
+        if count > 5:
+            car1_speed = 3
+            car2_speed = 3
+            car3_speed = 6
+            car4_speed = 6
+
+            tin_speed = 5
+            tin2_speed = 5
+            board_speed = 5
+            divider_speed = 5
+
+        if count > 10:
+            car1_speed = 4
+            car2_speed = 4
+            car3_speed = 7
+            car4_speed = 7
+
+            tin_speed = 6
+            tin2_speed = 6
+            board_speed = 6
+            divider_speed = 6
+
+        if count > 15:
+            car1_speed = 5
+            car2_speed = 5
+            car3_speed = 8
+            car4_speed = 8
+
+            tin_speed = 7
+            tin2_speed = 7
+            board_speed = 7
+            divider_speed = 7
+
+        if count > 20:
+            car1_speed = 6
+            car2_speed = 6
+            car3_speed = 9
+            car4_speed = 9
+
+            tin_speed = 8
+            tin2_speed = 8
+            board_speed = 8
+            divider_speed = 8
+
+        
+            
+        car_draw()
+        
+
+        #make it move
+        car_x += car_velocity_x
+        car_y += car_velocity_y
+
+        #make the  restrictions of boundary
+        if car_x < 0 or car_x + car_width > 1300 or car_y < 72 or car_y + car_height > 545:
+            car_x = 100
+            car_y = 110
+            count = 0
+            crashed()
+
+        #make the restriction of touching the tins
+        if car_x + car_width > tin_startx and car_x < tin_startx + tin_width:
+
+            if car_y + car_height/2 > tin_starty and car_y + car_height/2 < tin_starty + tin_height:
+                car_x = 100
+                car_y = 110
+                count = 0
+                crashed()
+                
+            if car_y > tin_starty and car_y < tin_starty + tin_height or car_y + car_height > tin_starty and car_y + car_height < tin_starty + tin_height:
+                car_x = 100
+                car_y = 110
+                count = 0
+                crashed()
+
+        if car_x + car_width > tin2_startx and car_x < tin2_startx + tin2_width:
+
+            if car_y + car_height/2 > tin2_starty and car_y + car_height/2 < tin2_starty + tin2_height:
+                car_x = 100
+                car_y = 110
+                count = 0
+                crashed()
+
+            if car_y > tin2_starty and car_y < tin2_starty + tin2_height or car_y + car_height > tin2_starty and car_y + car_height < tin2_starty + tin2_height:
+                car_x = 100
+                car_y = 110
+                count = 0
+                crashed()        
+
+        #make restrictions of touching the board
+        if car_x + car_width > board_startx and car_x < board_startx + board_width:
+            if car_y + car_height/2 > board_starty and car_y + car_height/2 < board_starty + board_height:
+                car_x = 100
+                car_y = 110
+                count = 0
+                crashed()
+
+            if car_y > board_starty and car_y < board_starty + board_height or car_y + car_height > board_starty and car_y + car_height < board_starty + board_height:
+                car_x = 100
+                car_y = 110
+                count = 0
+                crashed()
+
+        #make the restrictions of touching car1
+        if car_x + car_width > car1_startx and car_x < car1_startx + car1_width:
+
+            if car_y + car_height/2 > car1_starty and car_y + car_height/2 < car1_starty + car1_height:
+                car_x = 100
+                car_y = 110
+                if car_x + car_width > car1_startx and car_x < car1_startx + car1_width:
+                    car_x = car1_startx + 150
+                count = 0
+                crashed()
+                
+            if car_y > car1_starty and car_y < car1_starty + car1_height or car_y + car_height > car1_starty and car_y + car_height < car1_starty + car1_height:
+                car_x = 100
+                car_y = 110
+                if car_x + car_width > car1_startx and car_x < car1_startx + car1_width:
+                    car_x = car1_startx + 150
+                count = 0
+                crashed()
+
+        #make the restrictions of touching car2
+        if car_x + car_width > car2_startx and car_x < car2_startx + car2_width:
+
+            if car_y + car_height/2 > car2_starty and car_y + car_height/2 < car2_starty + car2_height:
+                car_x = 100
+                car_y = 110
+                if car_x + car_width > car2_startx and car_x < car2_startx + car2_width:
+                    car_x = car2_startx + 150
+                count = 0
+                crashed()
+                
+            if car_y > car2_starty and car_y < car2_starty + car2_height or car_y + car_height > car2_starty and car_y + car_height < car2_starty + car2_height:
+                car_x = 100
+                car_y = 110
+                if car_x + car_width > car2_startx and car_x < car2_startx + car2_width:
+                    car_x = car2_startx + 150
+                count = 0
+                crashed()                
+
+        #make the restrictions of touching car3
+        if car_x + car_width > car3_startx and car_x < car3_startx + car3_width:
+
+            if car_y + car_height/2 > car3_starty and car_y + car_height/2 < car3_starty + car3_height:
+                car_x = 100
+                car_y = 110
+                count = 0
+                crashed()
+                
+            if car_y > car3_starty and car_y < car3_starty + car3_height or car_y + car_height > car3_starty and car_y + car_height < car3_starty + car3_height:
+                car_x = 100
+                car_y = 110
+                count = 0
+                crashed()
+
+        #make the restrictions of touching car4
+        if car_x + car_width > car4_startx and car_x < car4_startx + car4_width:
+
+            if car_y + car_height/2 > car4_starty and car_y + car_height/2 < car4_starty + car4_height:
+                car_x = 100
+                car_y = 110
+                count = 0
+                crashed()
+                
+            if car_y > car4_starty and car_y < car4_starty + car4_height or car_y + car_height > car4_starty and car_y + car_height < car4_starty + car4_height:
+                car_x = 100
+                car_y = 110
+                count = 0
+                crashed()
+
+        #refresh the screen
+        pygame.display.update()
+
+        #choose FPS
+        clock.tick(1000)
+game_loop()
+#quit game
+pygame.quit()
+quit()
+
+</textarea>
+
+<center>
+<a href="page4some.html" class="button button6">Continue</a>
+<a href="#topPart" class="button button2">Go top</a>
+
+</center>
+
+
+</body>
+
+</html>

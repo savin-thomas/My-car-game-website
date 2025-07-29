@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Graphics</title>
+<style type="text/css">
+
+#topLine1{color:violet;position:absolute;top:0px;left:720px;font-family:"Lucida Calligraphy";font-size:50px;font-style:italic;font-weight:bold;}
+
+#line1{text-align:center;font-family:"Lucida Calligraphy";font-size:50px;font-style:italic;font-weight:bold;}
+.paragraph{font-family:"Footlight MT";font-size:20px;}
+.heading{font-family:"Cooper"; font-size:35px;font-style:italic;font-weight:bold;}
+.subHeading{font-family:"Cooper"; font-size:20px;font-weight:bold;color:red;}
+
+
+
+#button_one{position:absolute;top:148px;left:611px;}
+#button_two{position:absolute;top:148px;left:778px;}
+#button_three{position:absolute;top:148px;left:918px;}
+#button_four{position:absolute;top:148px;left:1028px;}
+
+
+#topPart{background-color:#5B5C67;}
+
+
+.button {
+  position: relative;
+  overflow: hidden;
+
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.button1 {
+  background-color: #4CAF50; 
+  color: black; 
+  border: 2px solid #DD00F9;
+}
+
+.button1:hover {
+  background-color: #DD00F9;
+  color: white;
+}
+
+.button2 {
+  background-color: #4CAF50; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: #4CAF50; 
+  color: black; 
+  border: 2px solid #36ebf4;
+}
+
+.button3:hover {
+  background-color: #36ebf4;
+  color: white;
+}
+
+.button4 {
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid orange;
+}
+
+.button4:hover {background-color: orange;}
+
+.button5 {
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid gold;
+}
+
+.button5:hover {
+  background-color: gold;
+  color: white;
+}
+
+.button6{
+background-color: #4CAF50;
+color: black;
+border: 2px solid #026DB2;
+}
+
+.button6:hover {
+  background-color: #026DB2;
+  color: white;
+}
+
+
+</style>
+</head>
+
+<body bgcolor="yellow">
+<div id="topPart">
+<img src="Lamborghini-Logo.png" width="200px">
+<img src="Lamborghini-huracanPic.jpg" width="400px" height="200px">
+</div>
+
+<p id="topLine1">My Car Game !!</p>
+
+
+<a href="page1some.html" id="button_one" class="button button2">Introduction</a>
+
+<a href="page2some.html" id="button_two" class="button button3">Graphics</a>
+
+<a href="page3some.html" id="button_three" class="button button4">Code</a>
+
+<a href="page4some.html" id="button_four" class="button button5">Code Explanation</a>
+
+
+<p id="line1">The Graphics</p>
+
+<center>
+<img src="Screenshot (16).png" width="50%" height="50%" border="3">
+</center>
+
+<p id="head1" class="heading">The 2 main things</p>
+<p id="sub1" class="subHeading">-The Pygame module</p>
+<p id="para1" class="paragraph">Pygame module is a module in Python which deals with graphics and is used to make games.<br>There are several functions within this module which will be very helpfull to draw objects on screen such as rectangles, lines, images, text, etc.</p>
+<p id="sub2" class="subHeading">-The colors to alpha property</p>
+<p id="para2" class="paragraph">The colors to alpha property is a property where you can change a particular color of an image to transparent so that the image blends with the background.</p>
+
+
+<p id="head2" class="heading">Now let's go step by step :-</p>
+<p id="sub3" class="subHeading">Step 1: Draw the road with it's yellow lines and white dividers :-</p>
+<p id="para3" class="paragraph">Note that the entire window screen is in the form of a cooridinate system, with x axis incrementing from left to right and y axis incrementing from top to botttom and each unit is a pixel.<br> After determining the window screen's width and height (in my case it is 1300 pixels wide and 700 pixels in height), we draw a grey rectangle for the road using the pygame.draw.rect function.<br>Then we will draw 4 yellow lines and 46 dividers using the pygame.draw.line function.</p>
+<p id="sub4" class="subHeading">Step 2: Draw the cars and the road objects like tins and board :-</p>
+<p id="para4" class="paragraph">We first download the images of cars and the road objects like tins and board and then we crop them, find out their dimensions which will be useful in coding, edit the background color of the images using the colors to alpha property, where we select a particular color to become transparent.<br>This can be done with some colors to alpha websites online where we can upload our image, select the color we want to turn transparent and save the image.<br>Now our cars, tins and board will blend with the road behined it.<br>I had to also make use of 'paint' to edit the images.<br>After editing the images, store them in the python directory as .png images.<br>Then, we can draw them on the window screen using screen.blit function which will be done later in the coding part.</p>
+<p class="paragraph">Here's a website for colors to alpha: <a href="https://onlinepngtools.com/create-transparent-png" target="_blank">Click here</a></p>
+<p id="sub5" class="subHeading">Step 3: Draw the score and the 'You Crashed message'.</p>
+<p id="para5" class="paragraph">Here we use the screen.blit function again to draw text like 'Score:' and 'You Crashed' on the window screen with a particular font style and size (in my case I used 'freesansbold.ttf' as font style and 36, 60 as respective font sizes).</p>
+
+<center>
+<a href="page3some.html" class="button button6">Continue</a>
+</center>
+</body>
+
+</html>

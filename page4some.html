@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Code Explanation</title>
+<style type="text/css">
+
+#topLine1{color:violet;position:absolute;top:0px;left:720px;font-family:"Lucida Calligraphy";font-size:50px;font-style:italic;font-weight:bold;}
+
+#line1{text-align:center;font-family:"Lucida Calligraphy";font-size:50px;font-style:italic;font-weight:bold;}
+.paragraph{font-family:"Footlight MT";font-size:20px;}
+.heading{font-family:"Cooper"; font-size:35px;font-style:italic;font-weight:bold;}
+.subHeading{color:red;font-family:"Cooper"; font-size:20px;font-weight:bold;}
+
+
+#button_one{position:absolute;top:148px;left:611px;}
+#button_two{position:absolute;top:148px;left:778px;}
+#button_three{position:absolute;top:148px;left:918px;}
+#button_four{position:absolute;top:148px;left:1028px;}
+
+
+#topPart{background-color:#5B5C67;}
+
+
+.button {
+  position: relative;
+  overflow: hidden;
+
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.button1 {
+  background-color: #4CAF50; 
+  color: black; 
+  border: 2px solid #DD00F9;
+}
+
+.button1:hover {
+  background-color: #DD00F9;
+  color: white;
+}
+
+.button2 {
+  background-color: #4CAF50; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: #4CAF50; 
+  color: black; 
+  border: 2px solid #36ebf4;
+}
+
+.button3:hover {
+  background-color: #36ebf4;
+  color: white;
+}
+
+.button4 {
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid orange;
+}
+
+.button4:hover {background-color: orange;}
+
+.button5 {
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid gold;
+}
+
+.button5:hover {
+  background-color: gold;
+  color: white;
+}
+
+.button6{
+background-color: #4CAF50;
+color: black;
+border: 2px solid #80FF00;
+}
+
+.button6:hover {
+  background-color: #80FF00;
+  color: white;
+}
+
+
+</style>
+</head>
+
+<body bgcolor="yellow">
+
+<div id="topPart">
+<img src="Lamborghini-Logo.png" width="200px">
+<img src="Lamborghini-huracanPic.jpg" width="400px" height="200px">
+</div>
+
+<p id="topLine1">My Car Game !!</p>
+
+
+<a href="page1some.html" id="button_one" class="button button2">Introduction</a>
+
+<a href="page2some.html" id="button_two" class="button button3">Graphics</a>
+
+<a href="page3some.html" id="button_three" class="button button4">Code</a>
+
+<a href="page4some.html" id="button_four" class="button button5">Code Explanation</a>
+
+
+<p id="line1">Code Explanation</p>
+<p class="heading">Part 1 :-</p>
+<p class="subHeading">Importing stuff, creating and initializing variables, drawing the basics.</p>
+<img src="Code1.png">
+<p class="paragraph">We import the following important modules :-<br><br>1) pygame:-<br><br>It is used to deal with graphics and is essential in making games in python. It consists of lots of functions which we will use while coding where we call the most of the functions using 'pygame.function_name'. There are other functions in pygame which do not use this syntax of calling the function such as 'screen.blit'.<br><br>2) time:-<br><br>It is used to create a time object to set the frames per second at which the game plays.<br><br>3) random:-<br><br>It allows us to make use of the random.choice functionality using which we can generate the traffic cars at random positions on the road.</p>
+
+<img src="Code2.png">
+<p class="paragraph">We have to initialize pygame module so that its various functions can be used.</p>
+
+<img src="Code3.png">
+<p class="paragraph">First, we set the screen width and height(You can make them suitable to your screen resolution). Then, we set the RGB color codes to varibles with color name white, black, etc. Then, we make a variable called count(It holds the game score) and give it an initial value of 0.</p>
+
+<img src="Code4.png">
+<p class="paragraph">Then, we set the player car's properties such as it's image's width, height, the coordinates of the car where it is placed by default, the speed with which the car moves per frame(Initially set to 0). Then, we set the properties of the road, such as its width and height. Then, we set the properties of the traffic objects, both the tins and the board which are in the middle of the road, such as their starting coordinates.</p>
+
+<img src="Code5.png">
+<img src="Code6.png">
+<p class="paragraph">Then, we set the starting and ending x and y coordinates for all the 46 dividers(There are 23 on one half of the road and another 23 on the other).</p>
+
+<img src="Code7.png">
+<p class="paragraph">Then, we set the width, height and speed  of the tins and the board and also the divider's width and height.</p>
+
+<img src="Code8.png">
+<img src="Code9.png">
+<p class="paragraph">Then, we set the aspects of each traffic car, from car1 to car4, such as starting x and y coordinates, width, height and speed.</p>
+
+<img src="Code10.png">
+<p class="paragraph">Then, we set the initial positions at which the traffic cars will be generated randomly.</p>
+
+<img src="Code11.png">
+<p class="paragraph">Then, we make the window screen using the pygame.display.set_mode() function and initialize it to the 'screen' variable.</p>
+
+<img src="Code12.png">
+<p class="paragraph">Then, we create a time object called 'clock' using the pygame.time.Clock() function. This helps to keep track of the time.</p>
+
+<img src="Code13.png">
+<p class="paragraph">Then, we create a function called background() where we fill the screen white in color, draw a grey rectangle using the pygame.draw.rect() function and then we draw 4 yellow lines using the pygame.draw.line() function.</p>
+
+<img src="Code14.png">
+<p class="paragraph">Then, we create a function called crashed() where we draw the 'You Crashed' message on the screen. To do this, first we assign the font and font size to a 'font' variable. Then, we assign the text 'You Crashed' to a 'text' variable along with parameters 'True' for anti-aliasing(Used to make the text more clear) and 'black' for the color. Then, we get the coordinates of the center of the screen using the text.get_rect() function and assign it to a variable 'textpos'. After that, we draw the text on the screen using screen.blit() function, update the screen using pygame.display.update() function (Updation is important for every frame so that the objects will move), make the program to sleep for 2 seconds (So that we can see the 'You Crashed' message for 2 seconds) and then we call the game_loop() function (This will come later in the program). </p>
+
+<img src="Code20.png">
+<p class="paragraph">Then, we create a function called draw_score() with count (which is the score) as parameter. In this function, we set the font and using font.render() function we make the message with 'True' (For anti-aliasing) and 'black' (For color) as parameters. Then, we draw this message on the screen using the screen.blit() function after getting its position using the text.get_rect() function.(Note: By default the position of the message is on the top left of the screen).</p>
+
+<img src="Code21.png">
+<p class="paragraph">Then, we assign each traffic car's starting coordinates with a random position function which will generate random coordinates among the 8 positions we initisialized before(The random functions will be defined later in the program).</p>
+
+<p class="heading">Part 2 :-</p>
+<p class="subHeading">The game loop</p>
+
+<img src="Code22.png">
+<p class="paragraph">Then, we create the main function of the program which is the game_loop() function. This function conatins the whole game in it. In this funciton, firstly we are going to gloabalize all the required variables (Without globalizing them, we can't use them within this function).</p>
+
+<img src="Code23.png">
+<p class="paragraph">Then, we create an infinte while loop. In this while loop, the first thing we are gonna have is a for loop which acts as an event loop. Here, for each an every event on keyboard, there is a particular task assigned using if statements.<br><br>If the event is to press the close button, the game quits.<br><br>If the event is a button pressed, the following are done :-<br><br>If the event is a keydown button, then the player car moves 3 pixels downwards.<br>If the event is a keyup button, then the player car moves 3 pixels upwards.<br>If the event is a keyright button, then the player car moves 3 pixels towards the right.<br>If the event is a keyleft button, then the player car moves 3 pixels towards the left.<br><br>If the event is a button released :-<br><br> If the event is keyup or keydown or keyright or keyleft, the player car doesnt change its position.</p>
+
+<img src="Code24.png">
+<p class="paragraph">Then, we call the background() function to draw the road with it's four yellow lines.</p>
+
+<img src="Code25.png">
+<p class="paragraph">Then, we call the draw_objects() function to draw the traffic objects such as tins and board.</p>
+
+<img src="Code26.png">
+<img src="Code27.png">
+<img src="Code28.png">
+<p class="paragraph">Then, we make the tins and the boards to move using their speed variables(This is done by decreementing the starting coordinates using the speed variables) and also set restrictions for them that once they pass the edge of the screen, they should originate at a new position ahead of the screen.(This is done by increementing the starting coordinates of the tins and board).</p>
+
+<img src="Code29.png">
+<p class="paragraph">Then, we call the required functions to draw each traffic car, from car1 to car4 and make them move using their speed variables(This is done by decrementing the starting coordinates with the speed variables).</p>
+
+<img src="Code30.png">
+<p class="paragraph">Then, we set restrictions on the traffic cars such that when they pass the edge of the screen, they generate at a new position ahead of the screen. This is done by assigning the starting coordinates of the traffic cars to the random position functions within the if statement. Also, the score is incremented by 2 once 2 cars pass the edge of the screen. </p>
+
+<img src="Code31.png">
+<p class="paragraph">Then, we call the draw_score function with count as its parameter to draw the score on the top left of the screen.</p>
+
+<img src="Code32.png">
+<p class="paragraph">Then, we call the draw_divider() function to draw all the 46 dividers.</p>
+
+<img src="Code33.png">
+<img src="Code34.png">
+<p class="paragraph">Then, we make the dividers move using their speed variables. We also set ristrictions for all the 46 dividers. Once they pass the edge of the screen, they should generate at a new position ahead of the screen.</p>
+
+<img src="Code35.png">
+<img src="Code36.png">
+<p class="paragraph">Then, we increase the difficulty of game with respect to the score in the count variable. We do this by increasing the speed variable's values everytime the score increases by 5. I have incremented the speed variables till the score becomes 20. If I would have gone further, the game would be very difficult to play. You can increase the difficulty based on your choice.</p>
+
+<img src="Code37.png">
+<p class="paragraph">Then, we call the car_draw() function to draw the player car.</p>
+
+<img src="Code38.png">
+<p class="paragraph">Then, we make the player car to move using it's speed variable in both x and y directions.</p>
+
+<img src="Code39.png">
+<p class="paragraph">Then, we make the restrictions of the player car touching the boundaries of the road. If the player car coordinates in the x direction passes the edges of the screen (both left and right) or if the player car coordinates in the y direction is beyond the limits of the road width then, the player car is brought to its default position, the score is set to 0 and the crashed() function is called to display the 'You Crashed' message.</p>
+
+<img src="Code40.png">
+
+
+<img src="Code41.png">
+
+
+<img src="Code42.png">
+
+
+<img src="Code43.png">
+<p class="paragraph">Similarly, we play with coordinates, checking if they pass a certain parameter, when it comes to touching the tins, the board and the traffic cars from car1 to car4.</p>
+
+<img src="Code44.png">
+<p class="paragraph">Then, we upadate (refresh) the screen using pygame.display.update() function.</p>
+
+<img src="Code45.png">
+<p class="paragraph">Then, we set the frames per second(In my case its 1000 frames per socond. You can put how much ever you want, but don't put it too low).</p>
+
+<p class="heading">Part 3 :-</p>
+<p class="subHeading">Calling and quiting</p>
+
+<img src="Code46.png">
+<p class="paragraph">Then, we call the game_loop() function.</p>
+
+<img src="Code47.png">
+<p class="paragraph">Then, we quit the game using pygame.quit() once the game loop is exited and then, we exit the program using quit().</p>
+
+
+<center>
+<a href="finishsome.html" class="button button6">Finish</a>
+</center>
+
+</body>
+</html>
